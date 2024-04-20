@@ -571,7 +571,7 @@ section {
   background-image: url("/static/img/about.jpg");
   background-position: center; 
   background-repeat: no-repeat;
-  background-size: 50% 50%; 
+  background-size: cover; 
 }
 
 .about h3 {
