@@ -585,13 +585,14 @@ section {
   left: 10%;
   right: 10%;
   bottom: 10%;
-  background-color: #fff;
+  background-color: rgb(0, 21, 114, 0.5);
   box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.08);
   padding: 20px;
   text-align: center;
 }
 
 .about .call-us h4 {
+  color: #fff !important;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 5px;
@@ -601,7 +602,7 @@ section {
 .about .call-us p {
   font-size: 28px;
   font-weight: 700;
-  color: var(--color-primary);
+  color: #fff;
 }
 
 .about .content ul {
