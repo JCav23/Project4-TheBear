@@ -9,7 +9,7 @@
         <div class="row justify-content-between gy-5">
             <div
                 class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
-                <h2 data-aos="fade-up">Send it<br>Chefs</h2>
+                <h2 data-aos="fade-up">Welcome to<br>The Bear</h2>
                 <p data-aos="fade-up" data-aos-delay="100">Sed autem laudantium dolores. Voluptatem itaque ea
                     consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
                 <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
@@ -83,31 +83,31 @@
 
         <div class="section-header">
             <h2>Our Menu</h2>
-            <p>Check Our <span>Yummy Menu</span></p>
+            <p>Check Our <span>Exquisite Menu</span></p>
         </div>
 
         <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
 
             <li class="nav-item">
-                <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
-                    <h4>Starters</h4>
+                <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-all">
+                    <h4>All</h4>
                 </a>
             </li><!-- End tab nav item -->
 
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
-                    <h4>Breakfast</h4>
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-appetizer">
+                    <h4>Appetizer</h4>
                 </a><!-- End tab nav item -->
 
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-lunch">
-                    <h4>Lunch</h4>
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-entree">
+                    <h4>Entrée</h4>
                 </a>
             </li><!-- End tab nav item -->
 
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-dinner">
-                    <h4>Dinner</h4>
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-dessert">
+                    <h4>Desserts</h4>
                 </a>
             </li><!-- End tab nav item -->
 
@@ -115,21 +115,21 @@
 
         <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
 
-            <div class="tab-pane fade active show" id="menu-starters">
+            <div class="tab-pane fade active show" id="menu-all">
 
                 <div class="tab-header text-center">
                     <p>Menu</p>
-                    <h3>Starters</h3>
+                    <h3>All</h3>
                 </div>
 
                 <div class="row gy-5">
 
                     <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Magnam Tiste</h4>
+                        <a href="{% static 'img/menu/focaccia.png' %}" class="glightbox"><img
+                                src="{% static 'img/menu/focaccia.png' %}" class="menu-img img-fluid" alt="focaccia menu item"></a>
+                        <h4>Focaccia</h4>
                         <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
+                            Brushed with Rosemary, Olive Oil, and Sea Salt
                         </p>
                         <p class="price">
                             $5.95
@@ -137,23 +137,11 @@
                     </div><!-- Menu Item -->
 
                     <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Aut Luia</h4>
+                        <a href="{% static 'img/menu/bucatini.png' %}" class="glightbox"><img
+                                src="{% static 'img/menu/bucatini.png' %}" class="menu-img img-fluid" alt=""></a>
+                        <h4>Bucatini</h4>
                         <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                        </p>
-                        <p class="price">
-                            $14.95
-                        </p>
-                    </div><!-- Menu Item -->
-
-                    <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Est Eligendi</h4>
-                        <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
+                            White Wine, Shiitake Mushrooms, Spinach
                         </p>
                         <p class="price">
                             $8.95
@@ -161,59 +149,71 @@
                     </div><!-- Menu Item -->
 
                     <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Eos Luibusdam</h4>
+                        <a href="{% static 'img/menu/seven-fishes.png' %}" class="glightbox"><img
+                                src="{% static 'img/menu/seven-fishes.png'%}" class="menu-img img-fluid" alt=""></a>
+                        <h4>Seven Fishes</h4>
                         <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
+                            Clams, Mussels, Halibut, Shrimp, Anchovy, Calamari and Scallops
                         </p>
                         <p class="price">
-                            $12.95
+                            $14.95
                         </p>
                     </div><!-- Menu Item -->
 
                     <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Eos Luibusdam</h4>
+                        <a href="{% static 'img/menu/the-michael.png' %}" class="glightbox"><img
+                                src="{% static 'img/menu/the-michael.png' %}" class="menu-img img-fluid" alt=""></a>
+                        <h4>"The Michael" Cannoli</h4>
                         <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
+                            In Memoriam: Parmesan Shell, Mortadella Cream, Pistachio, Olive Tapenade
                         </p>
                         <p class="price">
-                            $12.95
+                            $18.95
                         </p>
                     </div><!-- Menu Item -->
 
                     <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Laboriosam Direva</h4>
+                        <a href="{% static 'img/menu/bear-honey-bun.png' %}" class="glightbox"><img
+                                src="{% static 'img/menu/bear-honey-bun.png' %}" class="menu-img img-fluid" alt=""></a>
+                        <h4>"The Bear" Honey Bun</h4>
                         <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
+                            Coconut, Honey, Cinnamon 
                         </p>
                         <p class="price">
                             $9.95
                         </p>
                     </div><!-- Menu Item -->
 
-                </div>
-            </div><!-- End Starter Menu Content -->
+                    <div class="col-lg-4 menu-item">
+                        <a href="{% static 'img/menu/copenhagen-sundae.png' %}" class="glightbox"><img
+                                src="{% static 'img/menu/copenhagen-sundae.png' %}" class="menu-img img-fluid" alt=""></a>
+                        <h4>Copenhagen Sundae</h4>
+                        <p class="ingredients">
+                            Danish Ice Cream, Cardamon, Orange, Vanilla
+                        </p>
+                        <p class="price">
+                            $12.95
+                        </p>
+                    </div><!-- Menu Item -->
 
-            <div class="tab-pane fade" id="menu-breakfast">
+                </div>
+            </div><!-- End All Menu Content -->
+
+            <div class="tab-pane fade" id="menu-appetizer">
 
                 <div class="tab-header text-center">
                     <p>Menu</p>
-                    <h3>Breakfast</h3>
+                    <h3>Appetizer</h3>
                 </div>
 
                 <div class="row gy-5">
 
                     <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Magnam Tiste</h4>
+                        <a href="{% static 'img/menu/focaccia.png' %}" class="glightbox"><img
+                                src="{% static 'img/menu/focaccia.png' %}" class="menu-img img-fluid" alt="focaccia menu item"></a>
+                        <h4>Focaccia</h4>
                         <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
+                            Brushed with Rosemary, Olive Oil, and Sea Salt
                         </p>
                         <p class="price">
                             $5.95
@@ -221,95 +221,35 @@
                     </div><!-- Menu Item -->
 
                     <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Aut Luia</h4>
+                        <a href="{% static 'img/menu/bucatini.png' %}" class="glightbox"><img
+                                src="{% static 'img/menu/bucatini.png' %}" class="menu-img img-fluid" alt=""></a>
+                        <h4>Bucatini</h4>
                         <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                        </p>
-                        <p class="price">
-                            $14.95
-                        </p>
-                    </div><!-- Menu Item -->
-
-                    <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Est Eligendi</h4>
-                        <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
+                            White Wine, Shiitake Mushrooms, Spinach
                         </p>
                         <p class="price">
                             $8.95
                         </p>
                     </div><!-- Menu Item -->
 
-                    <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Eos Luibusdam</h4>
-                        <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                        </p>
-                        <p class="price">
-                            $12.95
-                        </p>
-                    </div><!-- Menu Item -->
-
-                    <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Eos Luibusdam</h4>
-                        <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                        </p>
-                        <p class="price">
-                            $12.95
-                        </p>
-                    </div><!-- Menu Item -->
-
-                    <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Laboriosam Direva</h4>
-                        <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                        </p>
-                        <p class="price">
-                            $9.95
-                        </p>
-                    </div><!-- Menu Item -->
-
                 </div>
-            </div><!-- End Breakfast Menu Content -->
+            </div><!-- End Appetizer Menu Content -->
 
-            <div class="tab-pane fade" id="menu-lunch">
+            <div class="tab-pane fade" id="menu-entree">
 
                 <div class="tab-header text-center">
                     <p>Menu</p>
-                    <h3>Lunch</h3>
+                    <h3>Entrée</h3>
                 </div>
 
                 <div class="row gy-5">
 
                     <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Magnam Tiste</h4>
+                        <a href="{% static 'img/menu/seven-fishes.png' %}" class="glightbox"><img
+                                src="{% static 'img/menu/seven-fishes.png'%}" class="menu-img img-fluid" alt=""></a>
+                        <h4>Seven Fishes</h4>
                         <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                        </p>
-                        <p class="price">
-                            $5.95
-                        </p>
-                    </div><!-- Menu Item -->
-
-                    <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Aut Luia</h4>
-                        <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
+                            Clams, Mussels, Halibut, Shrimp, Anchovy, Calamari and Scallops
                         </p>
                         <p class="price">
                             $14.95
@@ -317,139 +257,55 @@
                     </div><!-- Menu Item -->
 
                     <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Est Eligendi</h4>
+                        <a href="{% static 'img/menu/the-michael.png' %}" class="glightbox"><img
+                                src="{% static 'img/menu/the-michael.png' %}" class="menu-img img-fluid" alt=""></a>
+                        <h4>"The Michael" Cannoli</h4>
                         <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
+                            In Memoriam: Parmesan Shell, Mortadella Cream, Pistachio, Olive Tapenade
                         </p>
                         <p class="price">
-                            $8.95
-                        </p>
-                    </div><!-- Menu Item -->
-
-                    <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Eos Luibusdam</h4>
-                        <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                        </p>
-                        <p class="price">
-                            $12.95
-                        </p>
-                    </div><!-- Menu Item -->
-
-                    <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Eos Luibusdam</h4>
-                        <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                        </p>
-                        <p class="price">
-                            $12.95
-                        </p>
-                    </div><!-- Menu Item -->
-
-                    <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Laboriosam Direva</h4>
-                        <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                        </p>
-                        <p class="price">
-                            $9.95
+                            $18.95
                         </p>
                     </div><!-- Menu Item -->
 
                 </div>
-            </div><!-- End Lunch Menu Content -->
+            </div><!-- End Entree Menu Content -->
 
-            <div class="tab-pane fade" id="menu-dinner">
+            <div class="tab-pane fade" id="menu-dessert">
 
                 <div class="tab-header text-center">
                     <p>Menu</p>
-                    <h3>Dinner</h3>
+                    <h3>Dessert</h3>
                 </div>
 
                 <div class="row gy-5">
 
                     <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Magnam Tiste</h4>
+                        <a href="{% static 'img/menu/bear-honey-bun.png' %}" class="glightbox"><img
+                                src="{% static 'img/menu/bear-honey-bun.png' %}" class="menu-img img-fluid" alt=""></a>
+                        <h4>"The Bear" Honey Bun</h4>
                         <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                        </p>
-                        <p class="price">
-                            $5.95
-                        </p>
-                    </div><!-- Menu Item -->
-
-                    <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Aut Luia</h4>
-                        <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                        </p>
-                        <p class="price">
-                            $14.95
-                        </p>
-                    </div><!-- Menu Item -->
-
-                    <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Est Eligendi</h4>
-                        <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                        </p>
-                        <p class="price">
-                            $8.95
-                        </p>
-                    </div><!-- Menu Item -->
-
-                    <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Eos Luibusdam</h4>
-                        <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                        </p>
-                        <p class="price">
-                            $12.95
-                        </p>
-                    </div><!-- Menu Item -->
-
-                    <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Eos Luibusdam</h4>
-                        <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                        </p>
-                        <p class="price">
-                            $12.95
-                        </p>
-                    </div><!-- Menu Item -->
-
-                    <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img
-                                src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
-                        <h4>Laboriosam Direva</h4>
-                        <p class="ingredients">
-                            Lorem, deren, trataro, filede, nerada
+                            Coconut, Honey, Cinnamon 
                         </p>
                         <p class="price">
                             $9.95
                         </p>
                     </div><!-- Menu Item -->
 
+                    <div class="col-lg-4 menu-item">
+                        <a href="{% static 'img/menu/copenhagen-sundae.png' %}" class="glightbox"><img
+                                src="{% static 'img/menu/copenhagen-sundae.png' %}" class="menu-img img-fluid" alt=""></a>
+                        <h4>Copenhagen Sundae</h4>
+                        <p class="ingredients">
+                            Danish Ice Cream, Cardamon, Orange, Vanilla
+                        </p>
+                        <p class="price">
+                            $12.95
+                        </p>
+                    </div><!-- Menu Item -->
+
                 </div>
-            </div><!-- End Dinner Menu Content -->
+            </div><!-- End Dessert Menu Content -->
 
         </div>
 
