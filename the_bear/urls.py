@@ -19,6 +19,7 @@ from django.urls import path, include
 from home_page import views as home_views
 
 urlpatterns = [
+    path('accounts/', include('allauth.urls')),
     path('admin/', admin.site.urls),
     path('', include('home_page.urls'), name='home_page')
 ]
