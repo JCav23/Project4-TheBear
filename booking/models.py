@@ -36,8 +36,6 @@ class Booking(models.Model):
     the booking form when creating a booking. Guest uses Foreign
     key constraint to relate each booking to specific user 
     """
-    class Meta:
-        unique_together = ('date', 'time', 'guest')
 
     guest = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='guest_booking'
@@ -57,6 +55,10 @@ class Booking(models.Model):
         validators=[phoneValidate],
         max_length=16
     )
+
+    class Meta:
+        ordering = ['-time','-date']
+        unique_together = ('date', 'time', 'guest')
 
     def __str__(self):
         return f"Booking for {self.f_name} {self.l_name} at {self.date} at {self.time}"
