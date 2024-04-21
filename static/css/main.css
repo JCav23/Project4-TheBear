@@ -1528,7 +1528,26 @@ section {
   box-shadow: 0 8px 28px rgba(86, 136, 199, 0.2);
 }
 
+.hero .btn-user-account {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 36px;
+  border: none;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  background: var(--color-primary);
+  box-shadow: 0 8px 28px rgba(86, 136, 199, 0.2);
+}
+
 .hero .btn-book-a-table:hover {
+  background: rgba(86, 136, 199, 0.8);
+  box-shadow: 0 8px 28px rgba(86, 136, 199, 0.45);
+}
+
+.hero .btn-user-account:hover {
   background: rgba(86, 136, 199, 0.8);
   box-shadow: 0 8px 28px rgba(86, 136, 199, 0.45);
 }
