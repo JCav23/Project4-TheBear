@@ -57,7 +57,12 @@
           <li><a href="{% url 'home' %}#menu">Menu</a></li>
           <li><a href="{% url 'home' %}#chefs">Chefs</a></li>
           <li><a href="{% url 'home' %}#gallery">Gallery</a></li>
-          <!-- <li><a href="{% url 'home' %}#contact">Contact</a></li> -->
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+          {% else %}
+          <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+          <li><a href="{% url 'account_login' %}">Login</a></li>
+          {% endif %}
         </ul>
       </nav><!-- .navbar -->
 
