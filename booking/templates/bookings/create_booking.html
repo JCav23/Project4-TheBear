@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 my-5">
+            <h2>Welcome</h2>
+            <p>Please enter the your details to make a reservation with us. 
+                If you have any specific dietary requirements, or special
+                considerations to make regarding your booking please contact
+                the restaurant by telephone.</p>
+
+            <form id="collaborateForm" method="post" style="margin-top: 1.3em;">
+              {{ booking_form | crispy }}
+              {% csrf_token %}
+              <button type="submit "class="btn btn-user-account">Submit</button>
+            </form> 
+        </div>
+    </div>
+</div>
+
+{% endblock %}
