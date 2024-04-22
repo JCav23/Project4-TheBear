@@ -11,9 +11,14 @@ def create_booking(request):
     if request.method == 'POST':
         booking_form = BookingForm(data=request.POST)
         if booking_form.is_valid():
-            booking = booking_form.save()
+            booking = booking_form.save(commit=False)
+            booking_form.user = request.user
             messages.add_message(request, messages.SUCCESS,
             "Your booking has been confirmed, we look forward to seeing you.")
+        else:
+            messages.error(
+                request, "Error: Booking is Unavailable or Invalid"
+            )
 
     booking_form = BookingForm()
 
