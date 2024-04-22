@@ -13,7 +13,7 @@ def create_booking(request):
         if booking_form.is_valid():
             booking = booking_form.save(commit=False)
             booking_form.user = request.user
-            messages.add_message(request, messages.SUCCESS,
+            messages.success(request, 
             "Your booking has been confirmed, we look forward to seeing you.")
         else:
             messages.error(
@@ -27,5 +27,5 @@ def create_booking(request):
         "bookings/create_booking.html",
         {
             "booking_form": booking_form,
-        }
+        },
     )

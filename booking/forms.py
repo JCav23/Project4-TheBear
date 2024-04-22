@@ -1,5 +1,14 @@
 from django import forms
 from .models import Booking
+import datetime 
+
+class DateInput(forms.DateInput):
+    """
+    Provides the user with a UI Calendar to select date 
+    entry.
+    """
+    input_type = 'date'
+
 
 class BookingForm(forms.ModelForm):
     class Meta:
@@ -19,4 +28,7 @@ class BookingForm(forms.ModelForm):
             'time': 'Time',
             'num_guests': 'Number Of Guests',
             'contact_number': 'Contact Number',
+        }
+        widgets = {
+            'date': DateInput()
         }

@@ -17,15 +17,15 @@ HOURS = (
 )
 
 GUESTS = (
-    ('2', '2'),
-    ('3', '3'),
-    ('4', '4'),
-    ('5', '5'),
-    ('6', '6'),
-    ('7', '7'),
-    ('8', '8'),
-    ('9', '9'),
-    ('10', '10'),
+    (2, 2),
+    (3, 3),
+    (4, 4),
+    (5, 5),
+    (6, 6),
+    (7, 7),
+    (8, 8),
+    (9, 9),
+    (10, 10),
 )
 
 
@@ -43,10 +43,10 @@ class Booking(models.Model):
     f_name = models.CharField(max_length=15)
     l_name = models.CharField(max_length=20)
     date = models.DateField()
-    time = models.TimeField(choices=HOURS, default='19:00')
+    time = models.CharField(choices=HOURS, default='19:00')
     num_guests = models.IntegerField(choices=GUESTS, default='4')
     phoneValidate = RegexValidator(
-        regex=r'^\\+?[1-9][0-9]{8,15}$',
+        regex=r'^\+?1?\d{8,15}$',
         message='Please enter valid contact number,'
         'digits only, up to 15 allowed.',
         code="invalid"

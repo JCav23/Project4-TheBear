@@ -8,16 +8,21 @@
     <div class="row justify-content-center">
         <div class="col-12 col-md-6 my-5">
             <h2>Welcome</h2>
+            {% if user.is_authenticated %}
             <p>Please enter the your details to make a reservation with us. 
                 If you have any specific dietary requirements, or special
                 considerations to make regarding your booking please contact
                 the restaurant by telephone.</p>
 
-            <form id="collaborateForm" method="post" style="margin-top: 1.3em;">
+            <form id="booking-form" method="post" style="margin-top: 1.3em;">
               {{ booking_form | crispy }}
               {% csrf_token %}
               <button type="submit "class="btn-user-account">Submit</button>
-            </form> 
+            </form>
+            {% else %}
+            <p>To make a reservation with us you will need to <a href="{% url 'account_login' %}"><strong>login</strong></a>. 
+                If you do not have an account with us you can create one <a href="{% url 'account_signup' %}"><strong>here</strong></a>.</p>
+            {% endif %}
         </div>
     </div>
 </div>
