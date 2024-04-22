@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<div class="container mt-5">
+<div class="hero form container mt-5">
     <div class="row justify-content-center">
         <div class="col-12 col-md-6 my-5">
             <h2>Welcome</h2>
@@ -16,7 +16,7 @@
             <form id="collaborateForm" method="post" style="margin-top: 1.3em;">
               {{ booking_form | crispy }}
               {% csrf_token %}
-              <button type="submit "class="btn btn-user-account">Submit</button>
+              <button type="submit "class="btn-user-account">Submit</button>
             </form> 
         </div>
     </div>

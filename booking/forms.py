@@ -12,3 +12,11 @@ class BookingForm(forms.ModelForm):
             'num_guests',
             'contact_number',
         )
+        labels = {
+            'f_name': 'First Name',
+            'l_name': 'Last Name',
+            'date': 'Date',
+            'time': 'Time',
+            'num_guests': 'Number Of Guests',
+            'contact_number': 'Contact Number',
+        }

@@ -34,7 +34,7 @@ class Booking(models.Model):
     """
     Model to store a guest's booking information entered into 
     the booking form when creating a booking. Guest uses Foreign
-    key constraint to relate each booking to specific user 
+    key constraint to relate each booking to specific user. 
     """
 
     guest = models.ForeignKey(
