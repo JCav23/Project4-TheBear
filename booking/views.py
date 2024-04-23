@@ -8,28 +8,26 @@ def create_booking(request):
     """
     Renders the Create Booking Page
     """
-
     if request.method == 'POST':
-        booking_form = BookingForm(data=request.POST)
-        if booking_form.is_valid():
-            booking = booking_form.save(commit=False)
-            booking_form.user = request.user
-            booking_form.save()
-            messages.success(request, 
-            "Your booking has been confirmed, we look forward to seeing you.")
+        form = BookingForm(data=request.POST)
+        if form.is_valid():
+            booking = form.save(commit=False)
+            booking.guest = request.user
+            booking.save()
+            messages.add_message(
+                request, 
+                messages.SUCCESS,
+                "Booking Confirmed")
         else:
-            messages.error(
-                request, "Error: Booking is Unavailable or Invalid"
-            )
-
-    booking_form = BookingForm()
-
+            messages.add_message(
+                request,
+                messages.ERROR,
+                form.errors)
+    form = BookingForm()
     return render(
         request,
         "bookings/create_booking.html",
-        {
-            "booking_form": booking_form,
-        },
+        {'booking_form': form}
     )
 
 
