@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
+from django.core.exceptions import ValidationError
+import datetime
 
 HOURS = (
     ('17:00', '17:00'),
@@ -28,6 +30,17 @@ GUESTS = (
     (10, 10),
 )
 
+def validate_date(date):
+    if date < datetime.date.today():
+            raise ValidationError(
+                "The date cannot be in the past!",
+                params={"date": date},
+            )
+    if date.weekday() == 6:
+            raise ValidationError(
+                "Sorry, We Are Closed on Sundays!",
+                params={"date": date},
+            )
 
 # Create your models here.
 class Booking(models.Model):
@@ -42,7 +55,9 @@ class Booking(models.Model):
     )
     f_name = models.CharField(max_length=15)
     l_name = models.CharField(max_length=20)
-    date = models.DateField()
+    date = models.DateField(
+        validators=[validate_date]
+    )
     time = models.CharField(choices=HOURS, default='19:00')
     num_guests = models.IntegerField(choices=GUESTS, default='4')
     phoneValidate = RegexValidator(
@@ -55,7 +70,7 @@ class Booking(models.Model):
         validators=[phoneValidate],
         max_length=16
     )
-
+    
     class Meta:
         ordering = ['-time','-date']
         unique_together = ('date', 'time', 'guest')

@@ -59,6 +59,7 @@
           <li><a href="{% url 'home' %}#gallery">Gallery</a></li>
           {% if user.is_authenticated %}
           <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+          <li><a href="{% url 'reservations' %}">Reservations</a></li>
           {% else %}
           <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
           <li><a href="{% url 'account_login' %}">Login</a></li>

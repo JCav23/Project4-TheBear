@@ -22,6 +22,6 @@ from booking import views as booking_views
 urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('admin/', admin.site.urls),
-    path('book-a-table/', include('booking.urls'), name='create_booking'),
-    path('', include('home_page.urls'), name='home_page')
+    path('bookings/', include('booking.urls'), name='booking-urls'),
+    path('', include('home_page.urls'), name='home-urls')
 ]
