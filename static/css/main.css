@@ -582,11 +582,18 @@ section {
   list-style-type: none ;
 }
 
-.alert-close-btn {
-  color: #fff;
-  text-align: justify;
-}
+/*--------------------------------------------------------------
+# Modal
+--------------------------------------------------------------*/
 
+.btn-danger {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 12px 36px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
 
 /*--------------------------------------------------------------
 # About Section

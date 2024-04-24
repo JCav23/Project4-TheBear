@@ -33,7 +33,7 @@ GUESTS = (
 def validate_date(date):
     if date < datetime.date.today():
             raise ValidationError(
-                "The date cannot be in the past!",
+                "The Date cannot be in the Past!",
                 params={"date": date},
             )
     if date.weekday() == 6:

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .forms import BookingForm
 from .models import Booking
@@ -6,7 +6,9 @@ from .models import Booking
 # Create your views here.
 def create_booking(request):
     """
-    Renders the Create Booking Page
+    Renders the Create Booking Page, presents the user
+    with a form and validation to submit details for 
+    desired booking for the guest.
     """
     if request.method == 'POST':
         form = BookingForm(data=request.POST)
@@ -43,3 +45,26 @@ def reservations(request):
         'bookings': bookings
     }
     return render(request, 'bookings/reservations.html', context)
+
+
+def delete_reservation(request, booking_id):
+    """
+    The View that deletes the desired boooking, requires the 
+    user that made the booking otherwise will redirect back
+    to reservations.
+    """
+    reservation = get_object_or_404(Booking, pk=booking_id)
+    if request.user == reservation.guest:
+        reservation.delete()
+        messages.add_message(
+            request,
+            messages.SUCCESS,
+            "Your reservation has been cancelled."
+        )
+        return redirect('reservations')
+    else:
+        messages.add_message(
+            request,
+            messages.ERROR,
+            "ERROR: Only the Guest who made the reservation has permission to cancel."
+        )
