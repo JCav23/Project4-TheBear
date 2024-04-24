@@ -564,6 +564,31 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Alert Messages
+--------------------------------------------------------------*/
+
+.alert-message {
+  background-color: var(--color-primary);
+  border-radius: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  text-align: center;
+  opacity: 0.9;
+  z-index: 999;
+}
+
+.alert-message ul{
+  list-style-type: none ;
+}
+
+.alert-close-btn {
+  color: #fff;
+  text-align: justify;
+}
+
+
+/*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
 .about .about-img {

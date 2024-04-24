@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import BookingForm
 from .models import Booking
@@ -17,12 +17,13 @@ def create_booking(request):
             messages.add_message(
                 request, 
                 messages.SUCCESS,
-                "Booking Confirmed")
+                "Booking Confirmed, We Look Forward to Seeing you")
+            return redirect('reservations')
         else:
             messages.add_message(
                 request,
                 messages.ERROR,
-                form.errors)
+                list(form.errors.values())[0])
     form = BookingForm()
     return render(
         request,
