@@ -35,7 +35,8 @@ def create_booking(request):
 
 
 def reservations(request):
-    """ The View that renders the reservations.html
+    """ 
+    The View that renders the reservations.html
     which shows all bookings made by the current user
     or gives link to make a booking if no reservations made
     or redirects to signup page if user is not signed in.
@@ -68,3 +69,41 @@ def delete_reservation(request, booking_id):
             messages.ERROR,
             "ERROR: Only the Guest who made the reservation has permission to cancel."
         )
+        redirect('reservations')
+
+
+def edit_reservation(request, booking_id):
+    """
+    The view for editing a currently existing booking, validates the current user
+    or redirects back to reservations. Autofills form with current data stored 
+    in the booking.
+    """
+    reservation = get_object_or_404(Booking, pk=booking_id)
+    if request.user == reservation.guest:
+        if request.method == 'POST':
+            form = BookingForm(data=request.POST, instance=reservation)
+            if form.is_valid():
+                reservation.save()
+                messages.add_message(
+                    request, 
+                    messages.SUCCESS,
+                    "Booking Updated. See you soon!")
+                return redirect('reservations')
+            else:
+                messages.add_message(
+                    request,
+                    messages.ERROR,
+                    list(form.errors.values())[0])
+    else:
+        messages.add_message(
+            request,
+            messages.ERROR,
+            "ERROR: Only the Guest who made the reservation has permission to change a reservation."
+        )
+        redirect('reservations')
+    form = BookingForm(instance=reservation)
+    return render(
+        request,
+        "bookings/edit_booking.html",
+        {'booking_form': form}
+    )

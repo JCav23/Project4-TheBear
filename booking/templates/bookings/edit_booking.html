@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="hero form container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 my-5">
+            <h2>Update Reservation</h2>
+            <p>Please enter the details for your new booking.
+                Please be aware any last minute changes could affect your 
+                experience. Please be sure to contact the restaurant with
+                any special dietary requirements.
+            </p>
+
+            <form id="booking-form" method="POST" style="margin-top: 1.3em;">
+              {{ booking_form | crispy }}
+              {% csrf_token %}
+              <button type="submit "class="btn-user-account">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
