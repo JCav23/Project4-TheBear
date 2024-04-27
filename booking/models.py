@@ -58,7 +58,7 @@ class Booking(models.Model):
     date = models.DateField(
         validators=[validate_date]
     )
-    time = models.CharField(choices=HOURS, default='19:00')
+    time = models.CharField(choices=HOURS, default='19:00', max_length=10)
     num_guests = models.IntegerField(choices=GUESTS, default='4')
     phoneValidate = RegexValidator(
         regex=r'^\+?1?\d{8,15}$',
