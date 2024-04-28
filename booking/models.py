@@ -73,7 +73,7 @@ class Booking(models.Model):
     
     class Meta:
         ordering = ['-time','-date']
-        unique_together = ('date', 'time', 'guest')
+        unique_together = ['date', 'time']
 
     def __str__(self):
         return f"Booking for {self.f_name} {self.l_name} at {self.date} at {self.time}"
