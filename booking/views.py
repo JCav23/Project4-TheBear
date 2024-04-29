@@ -41,11 +41,14 @@ def reservations(request):
     or gives link to make a booking if no reservations made
     or redirects to signup page if user is not signed in.
     """
-    bookings = Booking.objects.filter(guest=request.user.id).order_by('-date')
-    context = {
-        'bookings': bookings
-    }
-    return render(request, 'bookings/reservations.html', context)
+    if request.user.is_authenticated:
+        bookings = Booking.objects.filter(guest=request.user.id).order_by('-date')
+        context = {
+            'bookings': bookings
+        }
+        return render(request, 'bookings/reservations.html', context)
+    else:
+        return redirect('/accounts/login')
 
 
 def delete_reservation(request, booking_id):
