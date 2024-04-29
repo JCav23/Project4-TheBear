@@ -208,11 +208,13 @@ Both manual and automated testing was used during the final development phase of
 |Book a Table | Validation shows if you have not filled in a field on form | pass |
 |Reservation | Displays your reservations on the page when logged in | pass |
 
-## Major Issues 
+## Bugs
+
+### Major Issues 
 
 - Errors within the model during development caused several issues to arise, including IntegrityError when the form input was recieving a null value for Django model fields such as the ID. Errors with the form validation such as the RegexValidator for the phone number and the Date widget, meant the form was unable to be submitted by the user but was able to be create by the admin panel. Also the original model design was missing an attribute in one of the fields which wasn't an issue straight away as the model was acceptable for the PostgreSQL instance used as the deployment database, but only arose during testing as the the model was not valid for SQLite. **Shoutout to Tutor John who helped me debug this issue I had never seen before**
 
-## Minor Issues 
+### Minor Issues 
 
 Most minor bugs were spotted and ironed out during development, major ones have been discussed in previous section, and the most significant found during final sweep have been listed below.
 
@@ -221,9 +223,17 @@ Most minor bugs were spotted and ironed out during development, major ones have 
 | Authentication | Unauthenticated Users were able to view booking when navigating using URL | FIXED |
 | Reservations | Error When navigating to reservation page while not logged in | FIXED |
 | Form Validation | Unique together constraint was written incorrectly and therefore not being run to validate | FIXED |
+| Favicon | Error in HREF causing it not to display | FIXED |
 
 #### Remaining Bugs
   - Currently no bugs are left known to remain.
+
+### HTML Validation 
+- Site was passed through [HTML Validator](https://validator.w3.org/nu/) with no issues
+
+### CSS Validation 
+
+
 
 ## Deployment
 
