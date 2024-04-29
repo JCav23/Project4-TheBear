@@ -1,5 +1,5 @@
 <h1 align="center">The Bear Restaurant</h1>
-<div align="center"><img src=""></div>
+<div align="center"><img src="documentation/website-responsive-mockup.png"></div>
 
 This project was designed as a restaurant website and booking tool for the fictional restaurant The Bear, 
 based on the award winning television show of the same name. The menu, chefs, testimonials and color scheme was all created 
@@ -53,11 +53,11 @@ using ideas taken directly from or inspired by the show.
         - The fonts in the theme are aimed to be simple and elegant, and reinforce that idea of a modern trendy restaurant
      - Images  
         - The images provided were mostly screenshots taken directly from the show, or from promotional material including menu items, and chef bio images. **DISCLAIMER** None of the images are owned or created by me and this project is intended for educational purposes only.
-        - The main hero image of the geometric bear head is designed to be the logo of the restaurant invoking again that idea of a modern restaurant 
+        - The main hero image of the geometric bear head is designed to be the logo of the restaurant invoking again that idea of a modern restaurant while promoting clear branding
 
 -   ### Wireframes
     - Several wireframes were created to assist with the design however there is not an exhaustive collection of all page designs
-    ![They can be viewed here](documentation/wireframes/)  
+    ![They can be viewed here](documentation/wireframes/menu_desktop.png)  
 
 -   ### Database Schema  
     - The database design schema can be viewed below. It consists of a Booking model with a foreignKey of User that relates to the standard library Django.Contrib.Auth User model.  
