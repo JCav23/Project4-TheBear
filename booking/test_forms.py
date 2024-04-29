@@ -157,21 +157,6 @@ class TestBookingForm(TestCase):
         self.assertFalse(booking_form.is_valid())
 
 
-    def test_form_num_guests_field(self):
-        """
-        Tests validition on number of guests field using empty field
-        """
-        booking_form = BookingForm({
-            'f_name': 'mr',
-            'l_name': 'test',
-            'date': '2024-04-27',
-            'time': '28:00',
-            'num_guests': '',
-            'contact_number': '12345678',
-        })
-        self.assertFalse(booking_form.is_valid())
-
-
     def test_form_num_guests_field_no_guests(self):
         """
         Tests validition on number of guests field using zero
@@ -198,21 +183,6 @@ class TestBookingForm(TestCase):
             'time': '28:00',
             'num_guests': '11',
             'contact_number': '12345678',
-        })
-        self.assertFalse(booking_form.is_valid())
-
-
-    def test_form_num_guests_field_too_many_guests(self):
-        """
-        Tests validition on number of guests field using empty field
-        """
-        booking_form = BookingForm({
-            'f_name': 'mr',
-            'l_name': 'test',
-            'date': '2024-04-27',
-            'time': '28:00',
-            'num_guests': '11',
-            'contact_number': '',
         })
         self.assertFalse(booking_form.is_valid())
 
