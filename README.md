@@ -224,6 +224,7 @@ Most minor bugs were spotted and ironed out during development, major ones have 
 | Reservations | Error When navigating to reservation page while not logged in | FIXED |
 | Form Validation | Unique together constraint was written incorrectly and therefore not being run to validate | FIXED |
 | Favicon | Error in HREF causing it not to display | FIXED |
+| URLs | Navigating using urls was causing errors due to booking/ app being seperate | FIXED |
 
 #### Remaining Bugs
   - Currently no bugs are left known to remain.
