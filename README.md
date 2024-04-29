@@ -296,7 +296,7 @@ In the Deploy tab:
 ## Credits
 
 ### Code
-  - [Restaurantly Boostrap theme](https://bootstrapmade.com/restaurantly-restaurant-template/) was the Boostrap theme used in the project.
+  - [Yummy Boostrap theme](https://bootstrapmade.com/https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template//) was the Boostrap theme used in the project.
   - [Django Documenation](https://www.djangoproject.com/) was used to provide examples of code solutions and Django functionality.
   - [Bootstrap Documenation](https://getbootstrap.com/) was used to provide examples of Bootstrap functionality and building blocks.
   - [Code Institute walkthrough](https://codeinstitute.net/) as inspiration and code examples, the code institute walkthroughs "Hello Django" and "I Think Therefore I Blog" was used.
