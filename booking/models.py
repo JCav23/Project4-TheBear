@@ -30,34 +30,32 @@ GUESTS = (
     (10, 10),
 )
 
+
 def validate_date(date):
     if date < datetime.date.today():
             raise ValidationError(
                 "The Date cannot be in the Past!",
-                params={"date": date},
-            )
+                params={"date": date},)
     if date.weekday() == 6:
             raise ValidationError(
                 "Sorry, We Are Closed on Sundays!",
-                params={"date": date},
-            )
+                params={"date": date},)
+
 
 # Create your models here.
 class Booking(models.Model):
     """
-    Model to store a guest's booking information entered into 
+    Model to store a guest's booking information entered into
     the booking form when creating a booking. Guest uses Foreign
-    key constraint to relate each booking to specific user. 
+    key constraint to relate each booking to specific user.
     """
 
     guest = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='guest_booking'
-    )
+        User, on_delete=models.CASCADE, related_name='guest_booking')
     f_name = models.CharField(max_length=15)
     l_name = models.CharField(max_length=20)
     date = models.DateField(
-        validators=[validate_date]
-    )
+        validators=[validate_date])
     time = models.CharField(choices=HOURS, default='19:00', max_length=10)
     num_guests = models.IntegerField(choices=GUESTS, default='4')
     phoneValidate = RegexValidator(
@@ -68,11 +66,10 @@ class Booking(models.Model):
     )
     contact_number = models.CharField(
         validators=[phoneValidate],
-        max_length=16
-    )
-    
+        max_length=16)
+
     class Meta:
-        ordering = ['-time','-date']
+        ordering = ['-time', '-date']
         unique_together = ['date', 'time']
 
     def __str__(self):

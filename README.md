@@ -232,7 +232,10 @@ Most minor bugs were spotted and ironed out during development, major ones have 
 - Site was passed through [HTML Validator](https://validator.w3.org/nu/) with no issues
 
 ### CSS Validation 
+- Site was passed through [CSS Validation](https://jigsaw.w3.org/css-validator/) with some minor issues that were then fixed
+![css-validation](documentation/screenshots/css-valid.png)
 
+### PEP8 Validator
 
 
 ## Deployment

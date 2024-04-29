@@ -1,10 +1,11 @@
 from django import forms
 from .models import Booking
-import datetime 
+import datetime
+
 
 class DateInput(forms.DateInput):
     """
-    Provides the user with a UI Calendar to select date 
+    Provides the user with a UI Calendar to select date
     entry.
     """
     input_type = 'date'

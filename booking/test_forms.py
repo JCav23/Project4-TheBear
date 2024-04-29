@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .forms import BookingForm
 
+
 # Create your tests here.
 class TestBookingForm(TestCase):
     """
@@ -21,7 +22,6 @@ class TestBookingForm(TestCase):
         })
         self.assertTrue(booking_form.is_valid())
 
-
     def test_form_f_name_field(self):
         """
         Tests validition on first name field using empty field
@@ -35,7 +35,6 @@ class TestBookingForm(TestCase):
             'contact_number': '12345678',
         })
         self.assertFalse(booking_form.is_valid())
-
 
     def test_form_l_name_field(self):
         """
@@ -51,7 +50,6 @@ class TestBookingForm(TestCase):
         })
         self.assertFalse(booking_form.is_valid())
 
-
     def test_form_date_field(self):
         """
         Tests validition on date field using empty field
@@ -66,7 +64,6 @@ class TestBookingForm(TestCase):
         })
         self.assertFalse(booking_form.is_valid())
 
-    
     def test_form_date_field_wrong_format(self):
         """
         Tests validition on date field using incorrect format dd-mm-yyyy
@@ -80,7 +77,6 @@ class TestBookingForm(TestCase):
             'contact_number': '12345678',
         })
         self.assertFalse(booking_form.is_valid())
-
 
     def test_form_date_field_past_date(self):
         """
@@ -96,7 +92,6 @@ class TestBookingForm(TestCase):
         })
         self.assertFalse(booking_form.is_valid())
 
-    
     def test_form_time_field(self):
         """
         Tests validition on time field using empty field
@@ -111,7 +106,6 @@ class TestBookingForm(TestCase):
         })
         self.assertFalse(booking_form.is_valid())
 
-    
     def test_form_time_field_closed_hours(self):
         """
         Tests validition on time field using time outside of opening hours
@@ -125,7 +119,6 @@ class TestBookingForm(TestCase):
             'contact_number': '12345678',
         })
         self.assertFalse(booking_form.is_valid())
-
 
     def test_form_time_field_wrong_format(self):
         """
@@ -141,7 +134,6 @@ class TestBookingForm(TestCase):
         })
         self.assertFalse(booking_form.is_valid())
 
-    
     def test_form_num_guests_field(self):
         """
         Tests validition on number of guests field using empty field
@@ -155,7 +147,6 @@ class TestBookingForm(TestCase):
             'contact_number': '12345678',
         })
         self.assertFalse(booking_form.is_valid())
-
 
     def test_form_num_guests_field_no_guests(self):
         """
@@ -171,10 +162,10 @@ class TestBookingForm(TestCase):
         })
         self.assertFalse(booking_form.is_valid())
 
-
     def test_form_num_guests_field_too_many_guests(self):
         """
-        Tests validition on number of guests field using number bigger than largest accepted sitting
+        Tests validition on number of guests field using
+        number bigger than largest accepted sitting.
         """
         booking_form = BookingForm({
             'f_name': 'mr',
@@ -185,7 +176,6 @@ class TestBookingForm(TestCase):
             'contact_number': '12345678',
         })
         self.assertFalse(booking_form.is_valid())
-
 
     def test_form_contact_number(self):
         """
@@ -200,7 +190,6 @@ class TestBookingForm(TestCase):
             'contact_number': '',
         })
         self.assertFalse(booking_form.is_valid())
-
 
     def test_form_contact_number_wrong_format(self):
         """

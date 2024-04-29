@@ -4,6 +4,7 @@ from django.urls import reverse
 from .models import Booking
 from .forms import BookingForm
 
+
 # Create your tests here.
 class TestBookingViews(TestCase):
 
@@ -17,7 +18,7 @@ class TestBookingViews(TestCase):
             email="test@test.com"
         )
         self.booking = Booking(
-            guest= self.user,
+            guest=self.user,
             f_name='Tim',
             l_name='Esting',
             date='2024-06-23',
@@ -26,7 +27,6 @@ class TestBookingViews(TestCase):
             contact_number='123456789'
         )
         self.booking.save()
-
 
     def test_render_reservations(self):
         """
@@ -38,4 +38,3 @@ class TestBookingViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Tim', response.content)
         self.assertIn(b'19:00', response.content)
-    
