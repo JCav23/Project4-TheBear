@@ -72,7 +72,7 @@ def delete_reservation(request, booking_id):
             messages.ERROR,
             "ERROR: Only the Guest who made the reservation has permission to cancel."
         )
-        redirect('reservations')
+        return redirect('reservations')
 
 
 def edit_reservation(request, booking_id):
@@ -103,7 +103,7 @@ def edit_reservation(request, booking_id):
             messages.ERROR,
             "ERROR: Only the Guest who made the reservation has permission to change a reservation."
         )
-        redirect('reservations')
+        return redirect('reservations')
     form = BookingForm(instance=reservation)
     return render(
         request,
