@@ -236,6 +236,8 @@ Most minor bugs were spotted and ironed out during development, major ones have 
 ![css-validation](documentation/screenshots/css-valid.png)
 
 ### PEP8 Validator
+- The [pycodestyle](https://pycodestyle.pycqa.org/en/latest/index.html) package was installed and used to check for PEP8 Validation, some minor issues regarding line length were found
+but as they relate to string lengths for user response they were left.
 
 
 ## Deployment
